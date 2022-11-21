@@ -1,6 +1,6 @@
 import logging
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
-from info import AUTH_CHANNEL, LONG_IMDB_DESCRIPTION, MAX_LIST_ELM, SHORTENER_API
+from info import *
 from imdb import IMDb
 import asyncio
 from pyrogram.types import Message, InlineKeyboardButton
@@ -460,13 +460,13 @@ def humanbytes(size):
     return str(round(size, 2)) + " " + Dic_powerN[n] + 'B'
 
 async def get_shortlink(link):
-    return f"https://omegalinks.in/st?api={SHORTENER_API}&url={link}"
+    return f"https://omegalinks.in/st?api={URL_SHORTNER_WEBSITE_API}&url={link}"
 #     https = link.split(":")[0]
 #     if "http" == https:
 #         https = "https"
 #         link = link.replace("http", https)
 #     url = f'https://omegalinks.in/api'
-#     params = {'api': SHORTENER_API,
+#     params = {'api': URL_SHORTNER_WEBSITE_API,
 #               'url': link,
 #               }
 
@@ -478,8 +478,8 @@ async def get_shortlink(link):
 #                     return data['shortenedUrl']
 #                 else:
 #                     logger.error(f"Error: {data['message']}")
-#                     return f'https://omegalinks.in/api?api={SHORTENER_API}&link={link}'
+#                     return f'https://omegalinks.in/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
 
 #     except Exception as e:
 #         logger.error(e)
-#         return f'https://omegalinks.in/api?api={SHORTENER_API}&link={link}'
+#         return f'https://omegalinks.in/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
