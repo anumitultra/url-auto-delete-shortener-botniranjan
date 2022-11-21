@@ -40,7 +40,7 @@ class temp(object):
     U_NAME = None
     B_NAME = None
     SETTINGS = {}
-
+    
 async def is_subscribed(bot, query):
     try:
         user = await bot.get_chat_member(AUTH_CHANNEL, query.from_user.id)
@@ -192,89 +192,7 @@ def get_size(size):
         i += 1
         size /= 1024.0
     return "%.2f %s" % (size, units[i])
-def get_name2(name):
-    name = name.lower()
-    name = name.replace("english", '')
-    name = name.replace("hindi", '')
-    name = name.replace("tamil", '')
-    name = name.replace("480p", '')
-    name = name.replace("720", '')
-    name = name.replace("1080", '') 
-    name = name.replace("hevc", '')
-    name = name.replace("bluray", '')
-    name = name.replace("6ch", '')
-    name = name.replace("camrip", '')
-    name = name.replace("hd",'')
-    name = name.replace("psa", '')
-    name = name.replace("x265", '')
-    name = name.replace("x264", '')
-    
-    return name
-    
-def get_name(name):
-    name = name.lower()
-    name = name.replace("@cc", '')
-    name = name.replace("telegram", '')
-    name = name.replace("www", '')
-    name = name.replace("join", '')
-    name = name.replace("tg", '')
-    name = name.replace("link", '') 
-    name = name.replace("@", '')
-    name = name.replace("massmovies0", '')
-    name = name.replace("bullmoviee", '')
-    name = name.replace("massmovies", '')
-    name = name.replace("maassmovies",'')
-    name = name.replace("tif", '')
-    name = name.replace("f&t", '')
-    name = name.replace("fbm", '')
-    name = name.replace("mwkott", '')
-    name = name.replace("team_hdt", '')
-    name = name.replace("worldcinematoday", '')
-    name = name.replace("cinematic_world", '')
-    name = name.replace("cinema", '')
-    name = name.replace("hotstar ", '')
-    name = name.replace("apdackup", '')
-    name = name.replace("streamersHub", '')
-    name = name.replace("tg", '')
-    name = name.replace("movies", '')
-    name = name.replace("ava", '')
-    name = name.replace("tamilrockers", '')
-    name = name.replace("imax5", '')
-    name = name.replace("kerala rock", '')
-    name = name.replace("ott", '')
-    name = name.replace("rarefilms", '')
-    name = name.replace("linkzz", '')
-    name = name.replace("movems", '')
-    name = name.replace("moviezz", '')
-    name = name.replace("movie", '')
-    name = name.replace("mlf", '')
-    name = name.replace("[rmk]", '')
-    name = name.replace("[mc]", '')
-    name = name.replace("[mfa]", '')
-    name = name.replace("[mm]", '')
-    name = name.replace("[me]", '')
-    name = name.replace("[", '')
-    name = name.replace("]", '')
-    name = name.replace("mlm", '')
-    name = name.replace("RMK", '')
-    name = name.replace("1tamilmv", '')
-    name = name.replace("linkz", '')
-    name = name.replace("tamilMob", '')
-    name = name.replace("tg", '')
-    name = name.replace("bollyarchives", '')
-    name = name.replace("🎞", '')
-    name = name.replace("🎬", '')
-    name = name.replace("(", '')
-    name = name.replace(")", '')
-    name = name.replace(" ", '.')
-    name = name.replace("_", '.')
-    name = name.replace("...", '.')
-    name = name.replace("..", '.')
 
-    if name[0] == '.':
-        name = name[1:]
-    return name
-    
 def split_list(l, n):
     for i in range(0, len(l), n):
         yield l[i:i + n]  
@@ -461,25 +379,3 @@ def humanbytes(size):
 
 async def get_shortlink(link):
     return f"https://omegalinks.in/st?api={URL_SHORTNER_WEBSITE_API}&url={link}"
-#     https = link.split(":")[0]
-#     if "http" == https:
-#         https = "https"
-#         link = link.replace("http", https)
-#     url = f'https://omegalinks.in/api'
-#     params = {'api': URL_SHORTNER_WEBSITE_API,
-#               'url': link,
-#               }
-
-#     try:
-#         async with aiohttp.ClientSession() as session:
-#             async with session.get(url, params=params, raise_for_status=True, ssl=False) as response:
-#                 data = await response.json()
-#                 if data["status"] == "success":
-#                     return data['shortenedUrl']
-#                 else:
-#                     logger.error(f"Error: {data['message']}")
-#                     return f'https://omegalinks.in/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
-
-#     except Exception as e:
-#         logger.error(e)
-#         return f'https://omegalinks.in/api?api={URL_SHORTNER_WEBSITE_API}&link={link}'
