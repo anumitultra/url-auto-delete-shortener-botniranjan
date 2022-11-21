@@ -10,15 +10,6 @@
 - ⟴ Custom URL Buttons (Updates channel, Add To Group, Force Sub, More...)
 
 
-
-
-
-</p>
-<h1 align="center">
-  <b>GreyMatter's Bot</b>
-</h1>
-
-
 ## Features
 
 - [x] 2GB+ Files Now Support
